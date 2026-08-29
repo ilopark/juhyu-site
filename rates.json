@@ -1,11 +1,11 @@
 {
-  "_comment": "연도별 4대보험 요율(근로자 부담). 국민연금은 연금개혁 확정 스케줄(2026~2033, 매년 +0.25%p). 건강보험·장기요양·고용보험과 국민연금 상한/하한(penMax/penMin)은 매년 8~9월 확정 시 갱신 필요 — 2027년 이후 값은 2026 기준 잠정치입니다.",
-  "2026": { "pension": 0.0475, "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009 },
-  "2027": { "pension": 0.05,   "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009 },
-  "2028": { "pension": 0.0525, "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009 },
-  "2029": { "pension": 0.055,  "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009 },
-  "2030": { "pension": 0.0575, "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009 },
-  "2031": { "pension": 0.06,   "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009 },
-  "2032": { "pension": 0.0625, "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009 },
-  "2033": { "pension": 0.065,  "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009 }
+  "_comment": "연도별 4대보험 요율(근로자 부담) + 실업급여 상한액(uiCap). 국민연금은 연금개혁 확정 스케줄(2026~2033, 매년 +0.25%p). 건강보험·장기요양·고용보험, 국민연금 상한/하한(penMax/penMin), 실업급여 상한액(uiCap)은 매년 확정 시 갱신 필요 — 2027년 이후 값은 2026 기준 잠정치입니다. 실업급여 하한액은 최저시급에서 자동 계산되어 여기 없습니다.",
+  "2026": { "pension": 0.0475, "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009, "uiCap": 68100 },
+  "2027": { "pension": 0.05,   "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009, "uiCap": 68100 },
+  "2028": { "pension": 0.0525, "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009, "uiCap": 68100 },
+  "2029": { "pension": 0.055,  "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009, "uiCap": 68100 },
+  "2030": { "pension": 0.0575, "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009, "uiCap": 68100 },
+  "2031": { "pension": 0.06,   "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009, "uiCap": 68100 },
+  "2032": { "pension": 0.0625, "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009, "uiCap": 68100 },
+  "2033": { "pension": 0.065,  "penMin": 410000, "penMax": 6590000, "health": 0.03595, "ltcRatio": 0.1314, "employ": 0.009, "uiCap": 68100 }
 }
