@@ -11,9 +11,9 @@
   gtag('js', new Date());
   gtag('config', 'G-HWR331WSCX');
 </script>
-<title>주휴수당 계산기 · 퇴직금 계산기 | 2026 알바 주휴수당·퇴직금 자동계산</title>
-<meta name="description" content="시급·근무시간이나 입·퇴사일만 넣으면 주휴수당과 퇴직금을 바로 계산. 지급 대상 여부, 3.3%·4대보험 공제 후 실수령까지. 현재 연도·최저시급 자동 반영 무료 계산기.">
-<meta name="keywords" content="주휴수당 계산기, 주휴수당 계산, 알바 주휴수당, 주휴수당 조건, 퇴직금 계산기, 퇴직금 계산, 알바 퇴직금, 평균임금 계산, 2027 최저시급, 주급 계산기, 시급 계산기">
+<title>주휴수당·퇴직금·실수령액 계산기 | 2026 연봉 실수령액 자동계산</title>
+<meta name="description" content="시급·근무시간, 입·퇴사일, 연봉만 넣으면 주휴수당·퇴직금·월 실수령액을 바로 계산. 2026년 4대보험 요율·최저시급 자동 반영 무료 계산기.">
+<meta name="keywords" content="주휴수당 계산기, 알바 주휴수당, 퇴직금 계산기, 알바 퇴직금, 연봉 실수령액 계산기, 실수령액 계산기, 월급 실수령액, 세후 월급 계산, 2026 4대보험 요율, 2027 최저시급, 시급 계산기">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="알바 계산기">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -50,7 +50,10 @@
     {"@type":"Question","name":"알바나 계약직도 퇴직금을 받나요?","acceptedAnswer":{"@type":"Answer","text":"네. 고용 형태와 무관하게 1년 이상 계속 근로하고 주 15시간 이상이면 알바·계약직·파트타임 모두 받습니다. 알바라서 안 준다는 것은 법 위반입니다."}},
     {"@type":"Question","name":"1년을 채우지 못하면 퇴직금을 받나요?","acceptedAnswer":{"@type":"Answer","text":"계속근로기간이 365일 미만이면 퇴직금은 발생하지 않습니다. 예를 들어 11개월 근무 후 퇴사하면 대상이 아닙니다. 1년하고 하루만 넘겨도 그 초과분만큼 일할 계산됩니다."}},
     {"@type":"Question","name":"퇴직금은 언제까지 지급해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"퇴직일로부터 14일 이내에 지급해야 합니다. 이 기간을 넘기면 지연이자가 붙고, 못 받은 경우 고용노동부(1350)에 신고할 수 있습니다. 청구 소멸시효는 3년입니다."}},
-    {"@type":"Question","name":"퇴직금 계산 결과에서 세금은 빠졌나요?","acceptedAnswer":{"@type":"Answer","text":"세전 퇴직금 기준입니다. 실제 수령액은 퇴직소득세가 공제되는데, 근속연수공제·환산급여공제 등으로 세율이 낮은 편이라 근속이 길수록 실수령 비율이 높아집니다. 정확한 세액은 국세청 홈택스에서 확인할 수 있습니다."}}
+    {"@type":"Question","name":"퇴직금 계산 결과에서 세금은 빠졌나요?","acceptedAnswer":{"@type":"Answer","text":"세전 퇴직금 기준입니다. 실제 수령액은 퇴직소득세가 공제되는데, 근속연수공제·환산급여공제 등으로 세율이 낮은 편이라 근속이 길수록 실수령 비율이 높아집니다. 정확한 세액은 국세청 홈택스에서 확인할 수 있습니다."}},
+    {"@type":"Question","name":"실수령액 계산기가 다른 곳과 소득세가 조금 다른 이유는?","acceptedAnswer":{"@type":"Answer","text":"매달 떼는 소득세는 국세청 간이세액표로 미리 걷는 방식이라 계산기마다 조금씩 다릅니다. 이 계산기는 연 환산 방식(근로소득공제·인적공제·누진세율·근로소득세액공제)으로 추정해 실제 1년치 세금에 가깝게 보여주며, 최종 금액은 연말정산에서 정산됩니다."}},
+    {"@type":"Question","name":"실수령액 계산에서 비과세액은 무엇을 넣나요?","acceptedAnswer":{"@type":"Answer","text":"식대(월 20만원까지), 자가운전보조금(월 20만원) 등 세금과 4대보험이 붙지 않는 항목입니다. 기본값은 식대 20만원이며, 급여명세서의 비과세 합계를 넣으면 더 정확합니다."}},
+    {"@type":"Question","name":"2026년 4대보험 요율은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"근로자 부담 기준 국민연금 4.75%, 건강보험 3.595%, 장기요양보험은 건강보험료의 13.14%, 고용보험 0.9%입니다. 국민연금은 연금개혁으로 2026년부터 9%에서 9.5%로 인상됐습니다."}}
   ]
 }
 </script>
@@ -257,6 +260,8 @@
   .seg button[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff;
     box-shadow:0 5px 14px -6px color-mix(in srgb,var(--brand) 70%,transparent)}
   .seg.seg-ded{grid-template-columns:repeat(3,1fr)}
+  .seg.seg-2{grid-template-columns:repeat(2,1fr)}
+  .seg.seg-fam{grid-template-columns:repeat(5,1fr)}
   .seg.seg-ded button{height:46px;font-size:13px;font-weight:600;line-height:1.25}
   .seg.seg-ded button small{display:block;font-size:10.5px;font-weight:500;opacity:.7;font-family:"IBM Plex Mono"}
   .ded-hint{font-size:12px;color:var(--muted);margin:11px 0 0;line-height:1.5}
@@ -399,7 +404,7 @@
   <div class="wrap top-inner">
     <div class="brand">
       <span class="mark">₩</span>
-      <span>알바 계산기<br><small>주휴수당 · 퇴직금</small></span>
+      <span>알바 계산기<br><small>주휴수당·퇴직금·실수령액</small></span>
     </div>
     <span class="spacer"></span>
     <span class="minwage-pill"><span class="dot"></span> <span data-year></span>년 최저시급 <b><span data-minwage></span>원</b> 기준</span>
@@ -425,6 +430,10 @@
       <button class="tab" id="tab-sev" role="tab" aria-selected="false" aria-controls="tool-sev">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-4V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM10 5h4v2h-4z"/></svg>
         퇴직금
+      </button>
+      <button class="tab" id="tab-salary" role="tab" aria-selected="false" aria-controls="tool-salary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        실수령액
       </button>
     </div>
   </section>
@@ -700,10 +709,100 @@
   </section>
   </div>
 
+  <!-- ============ TOOL 3: 실수령액 ============ -->
+  <div class="tool" id="tool-salary" role="tabpanel" aria-labelledby="tab-salary">
+  <section class="calc">
+    <div class="panel">
+      <div class="panel-in">
+        <h2 class="panel-title"><span class="n">1</span> 급여 정보 입력</h2>
+        <p class="panel-sub">연봉 또는 월급을 넣으면 4대보험·세금 뗀 실수령액이 나와요.</p>
+
+        <div class="field">
+          <div class="flabel"><span class="name">입력 기준</span></div>
+          <div class="seg seg-2" id="salBasisSeg" role="group" aria-label="입력 기준">
+            <button data-b="year" aria-pressed="true">연봉</button>
+            <button data-b="month">월급</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="flabel"><span class="name" id="salAmtLabel">연봉 (세전)</span></div>
+          <div class="money-box"><input id="salAmt" inputmode="numeric" value="36,000,000" aria-label="급여"><span class="won">원</span></div>
+        </div>
+
+        <div class="field">
+          <div class="flabel"><span class="name">비과세액 (월)</span><span class="opt">식대 등 · 기본 20만</span></div>
+          <div class="money-box sm"><input id="salNonTax" inputmode="numeric" value="200,000" aria-label="비과세액"><span class="won">원</span></div>
+        </div>
+
+        <div class="field">
+          <div class="flabel"><span class="name">부양가족 수</span><span class="opt">본인 포함</span></div>
+          <div class="seg seg-fam" id="salFamSeg" role="group" aria-label="부양가족 수">
+            <button data-f="1" aria-pressed="true">1</button><button data-f="2">2</button><button data-f="3">3</button><button data-f="4">4</button><button data-f="5">5+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slip-outer">
+      <div class="slip is-eligible" id="salSlip">
+        <div class="slip-in">
+          <div class="slip-head">
+            <div><div class="label">Net Salary</div><div class="title">실수령액 명세서</div></div>
+            <div class="badge good" id="salBadge"><span id="salBadgeText">실수령률 —</span></div>
+          </div>
+          <div class="hero-amount">
+            <div class="cap">월 실수령액 (예상)</div>
+            <div class="big"><span id="salNet" class="num">0</span><span class="w">원</span></div>
+            <div class="per" id="salPer">연 실수령 약 0원</div>
+          </div>
+          <div class="lines">
+            <div class="li"><span class="k">세전 월급</span><span class="v"><span id="salGross" class="num">0</span> 원</span></div>
+            <div class="li"><span class="k">국민연금 <span class="tag" id="rtPension">4.75%</span></span><span class="v" style="color:var(--bad)">−<span id="salPension" class="num">0</span> 원</span></div>
+            <div class="li"><span class="k">건강보험 <span class="tag" id="rtHealth">3.595%</span></span><span class="v" style="color:var(--bad)">−<span id="salHealth" class="num">0</span> 원</span></div>
+            <div class="li"><span class="k">장기요양 <span class="tag" id="rtLtc">건보×13.14%</span></span><span class="v" style="color:var(--bad)">−<span id="salLtc" class="num">0</span> 원</span></div>
+            <div class="li"><span class="k">고용보험 <span class="tag" id="rtEmploy">0.9%</span></span><span class="v" style="color:var(--bad)">−<span id="salEmploy" class="num">0</span> 원</span></div>
+            <div class="li"><span class="k">소득세 <span class="tag">예상</span></span><span class="v" style="color:var(--bad)">−<span id="salTax" class="num">0</span> 원</span></div>
+            <div class="li"><span class="k">지방소득세 <span class="tag">소득세×10%</span></span><span class="v" style="color:var(--bad)">−<span id="salLocal" class="num">0</span> 원</span></div>
+            <div class="li total"><span class="k">월 실수령</span><span class="v"><span id="salNetTotal" class="num">0</span> 원</span></div>
+            <div class="li month"><span class="k">연 실수령 <span class="tag">×12</span></span><span class="v"><span id="salNetYear" class="num">0</span> 원</span></div>
+          </div>
+          <div class="slip-note" id="salNote">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+            <span id="salNoteText">4대보험은 2026년 요율로 정확히, 소득세는 연 환산 추정치예요.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="sec-head"><div class="kicker">The Formula</div><h2>실수령액은 이렇게 계산돼요</h2></div>
+    <div class="formula">
+      <div class="flabel2">2026년 4대보험 요율 (근로자 부담)</div>
+      <div class="eq">공제액 = <b>국민연금 <span id="fPension">4.75%</span> + 건강보험 <span id="fHealth">3.595%</span> + 장기요양(건보×<span id="fLtc">13.14%</span>) + 고용보험 <span id="fEmploy">0.9%</span> + 소득세·지방세</b></div>
+      <div class="eq">실수령액 = <b>세전 급여 − 공제액</b></div>
+      <p class="exp">4대보험은 비과세액을 뺀 보수월액 기준으로 계산합니다(국민연금은 상한 659만·하한 41만원 적용). 소득세는 국세청 간이세액표 대신 <b>연 환산 방식</b>(근로소득공제·인적공제·누진세율·근로소득세액공제)으로 추정하므로 실제 원천징수액과 다를 수 있어요.</p>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="sec-head"><div class="kicker">FAQ</div><h2>실수령액 자주 묻는 질문</h2></div>
+    <div class="faq">
+      <details class="q" open><summary>왜 다른 계산기와 소득세가 조금 달라요? <span class="plus"></span></summary>
+        <div class="a">매달 떼는 소득세는 국세청 <b>간이세액표</b>로 미리 걷는 '가불'이라, 부양가족·급여에 따라 계산기마다 조금씩 달라요. 이 계산기는 <b>연 환산 방식</b>으로 추정해 실제 1년치 세금에 가깝게 보여줍니다. 최종 금액은 <b>연말정산</b>에서 정산돼요.</div></details>
+      <details class="q"><summary>비과세액은 뭘 넣나요? <span class="plus"></span></summary>
+        <div class="a">식대(월 20만원까지), 자가운전보조금(월 20만원) 등 세금·4대보험이 붙지 않는 항목이에요. 기본값은 <b>식대 20만원</b>으로 넣어뒀어요. 급여명세서의 비과세 합계를 넣으면 더 정확해집니다.</div></details>
+      <details class="q"><summary>2026년 4대보험이 왜 올랐나요? <span class="plus"></span></summary>
+        <div class="a">국민연금이 연금개혁으로 <b>2026년부터 9%→9.5%</b>(근로자 4.75%)로 올랐고, 건강보험도 7.09%→7.19%로 인상됐어요. 그래서 2025년보다 실수령액이 조금 줄어듭니다.</div></details>
+    </div>
+  </section>
+  </div>
+
   <footer class="foot">
     <div class="disc"><b>ⓘ 참고용 안내</b> — 본 계산기는 근로기준법·근로자퇴직급여 보장법의 산정 방식을 단순화해 세전 기준으로 계산합니다. 실제 지급액은 근로계약 내용, 통상임금 비교, 4주 평균 근로시간, 공제 항목 등에 따라 달라질 수 있으며 법적 효력을 갖지 않습니다.</div>
     <span data-year></span>년 최저임금 시간급 <b><span data-minwage></span>원</b> 기준 · 근로기준법 제55조 · 근로자퇴직급여 보장법 제8조<br>
-    © 알바 계산기 — 주휴수당·퇴직금 무료 계산기
+    © 알바 계산기 — 주휴수당·퇴직금·연봉 실수령액 무료 계산기
   </footer>
 </main>
 
@@ -752,7 +851,7 @@
 
   // ===== tabs =====
   function selectTab(id){
-    ["juhyu","sev"].forEach(function(k){
+    ["juhyu","sev","salary"].forEach(function(k){
       var on=(k===id);
       $("#tab-"+k).setAttribute("aria-selected",on?"true":"false");
       $("#tool-"+k).classList.toggle("active",on);
@@ -760,6 +859,7 @@
   }
   $("#tab-juhyu").addEventListener("click",function(){selectTab("juhyu")});
   $("#tab-sev").addEventListener("click",function(){selectTab("sev")});
+  $("#tab-salary").addEventListener("click",function(){selectTab("salary")});
 
   // ===== animated number (fallback-safe for hidden tabs) =====
   function animateNum(el,to){
@@ -933,9 +1033,130 @@
     var y=parseInt(b.dataset.y,10);var nj=new Date(NOW);nj.setFullYear(nj.getFullYear()-y);
     exitEl.value=iso(NOW); joinEl.value=iso(nj); calcSev();});
 
+  /* =========================================================
+     TOOL 3 — 실수령액 (2026년 요율)
+     ========================================================= */
+  /* ⚙️ 4대보험 요율 — rates.json(같은 폴더)로 자동 갱신, 없으면 아래 폴백 사용(최저시급과 동일 구조).
+     국민연금은 연금개혁 확정 스케줄(2026~2033)로 매년 자동 인상. 건강·장기요양·고용은 매년 확정 시 rates.json 갱신. */
+  var RATE_BY_YEAR={
+    2026:{pension:0.0475,penMin:410000,penMax:6590000,health:0.03595,ltcRatio:0.1314,employ:0.009},
+    2027:{pension:0.05,  penMin:410000,penMax:6590000,health:0.03595,ltcRatio:0.1314,employ:0.009},
+    2028:{pension:0.0525,penMin:410000,penMax:6590000,health:0.03595,ltcRatio:0.1314,employ:0.009},
+    2029:{pension:0.055, penMin:410000,penMax:6590000,health:0.03595,ltcRatio:0.1314,employ:0.009},
+    2030:{pension:0.0575,penMin:410000,penMax:6590000,health:0.03595,ltcRatio:0.1314,employ:0.009},
+    2031:{pension:0.06,  penMin:410000,penMax:6590000,health:0.03595,ltcRatio:0.1314,employ:0.009},
+    2032:{pension:0.0625,penMin:410000,penMax:6590000,health:0.03595,ltcRatio:0.1314,employ:0.009},
+    2033:{pension:0.065, penMin:410000,penMax:6590000,health:0.03595,ltcRatio:0.1314,employ:0.009}
+  };
+  var RATE=null;
+  function resolveRates(){
+    var years=Object.keys(RATE_BY_YEAR).map(Number);
+    var le=years.filter(function(y){return y<=YEAR});          // 올해 이하 연도 중 최신 (미래 요율은 안 씀)
+    var yr = le.length ? Math.max.apply(null,le) : Math.min.apply(null,years);
+    RATE=RATE_BY_YEAR[yr]; RATE._year=yr;
+  }
+  resolveRates();
+  function pctStr(x){return (+(x*100).toFixed(4))+"%";}
+  var salBasis="year", salFam=1;
+  var salAmtEl=$("#salAmt"), salNonTaxEl=$("#salNonTax");
+
+  // 근로소득 산출세액(누진세율, 2026)
+  function progressiveTax(b){
+    if(b<=0) return 0;
+    if(b<=14000000) return b*0.06;
+    if(b<=50000000) return b*0.15-1260000;
+    if(b<=88000000) return b*0.24-5760000;
+    if(b<=150000000) return b*0.35-15440000;
+    if(b<=300000000) return b*0.38-19940000;
+    if(b<=500000000) return b*0.40-25940000;
+    if(b<=1000000000) return b*0.42-35940000;
+    return b*0.45-65940000;
+  }
+  // 연 소득세(결정세액) 추정 — 근로소득공제·인적공제·4대보험공제·근로소득세액공제 반영
+  function incomeTaxYear(gross, dep, penYear, othYear){
+    if(gross<=0) return 0;
+    var d;
+    if(gross<=5000000) d=gross*0.7;
+    else if(gross<=15000000) d=3500000+(gross-5000000)*0.4;
+    else if(gross<=45000000) d=7500000+(gross-15000000)*0.15;
+    else if(gross<=100000000) d=12000000+(gross-45000000)*0.05;
+    else d=14750000+(gross-100000000)*0.02;
+    d=Math.min(d,20000000);
+    var earn=gross-d;
+    var personal=1500000*Math.max(1,dep);
+    var base=Math.max(0, earn-personal-penYear-othYear);
+    var t=progressiveTax(base);
+    var credit=t<=1300000 ? t*0.55 : 715000+(t-1300000)*0.30;
+    var cap;
+    if(gross<=33000000) cap=740000;
+    else if(gross<=70000000) cap=Math.max(660000,740000-(gross-33000000)*0.008);
+    else if(gross<=120000000) cap=Math.max(500000,660000-(gross-70000000)*0.5);
+    else cap=Math.max(200000,500000-(gross-120000000)*0.5);
+    credit=Math.min(credit,cap);
+    return Math.max(0, t-credit);
+  }
+
+  function applyRateDisplay(){
+    var p=pctStr(RATE.pension), h=pctStr(RATE.health), l=pctStr(RATE.ltcRatio), e=pctStr(RATE.employ);
+    var set=function(id,v){var el=$(id);if(el)el.textContent=v;};
+    set("#rtPension",p); set("#rtHealth",h); set("#rtLtc","건보×"+l); set("#rtEmploy",e);
+    set("#fPension",p); set("#fHealth",h); set("#fLtc",l); set("#fEmploy",e);
+  }
+  function calcSalary(){
+    applyRateDisplay();
+    var amt=parseMoney(salAmtEl), nonTax=parseMoney(salNonTaxEl);
+    var monthGross = salBasis==="year" ? amt/12 : amt;
+    var taxable = Math.max(0, monthGross-nonTax);        // 보수월액(비과세 제외)
+    // 4대보험(월, 근로자)
+    var penBase = Math.min(Math.max(taxable,RATE.penMin),RATE.penMax);
+    var pension = taxable>0 ? penBase*RATE.pension : 0;
+    var health = taxable*RATE.health;
+    var ltc = health*RATE.ltcRatio;
+    var employ = taxable*RATE.employ;
+    var insurance = pension+health+ltc+employ;
+    // 소득세(연 환산 추정 → 월)
+    var itYear = incomeTaxYear(taxable*12, salFam, pension*12, (health+ltc+employ)*12);
+    var tax = itYear/12;
+    var local = tax*0.1;
+    var totalDed = insurance+tax+local;
+    var net = Math.max(0, monthGross-totalDed);
+    var netYear = net*12;
+    var pct = monthGross>0 ? Math.round(net/monthGross*100) : 0;
+
+    animateNum($("#salNet"),net);
+    animateNum($("#salNetTotal"),net);
+    animateNum($("#salNetYear"),netYear);
+    animateNum($("#salGross"),monthGross);
+    animateNum($("#salPension"),pension);
+    animateNum($("#salHealth"),health);
+    animateNum($("#salLtc"),ltc);
+    animateNum($("#salEmploy"),employ);
+    animateNum($("#salTax"),tax);
+    animateNum($("#salLocal"),local);
+    $("#salBadgeText").textContent = monthGross>0 ? "실수령률 "+pct+"%" : "금액 입력";
+    $("#salPer").textContent = "연 실수령 약 "+fmt(netYear)+"원";
+    $("#salNoteText").innerHTML = "세전 대비 <b>"+pct+"%</b>를 실수령해요. 4대보험은 2026년 요율로 정확히, 소득세는 연 환산 추정치라 실제 원천징수와 다를 수 있어요.";
+  }
+
+  $("#salBasisSeg").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+    salBasis=b.dataset.b;
+    [].forEach.call(this.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+    $("#salAmtLabel").textContent = salBasis==="year" ? "연봉 (세전)" : "월급 (세전)";
+    // 기준 전환 시 기본값 보정
+    salAmtEl.value = salBasis==="year" ? "36,000,000" : "3,000,000";
+    calcSalary();
+  });
+  $("#salFamSeg").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+    salFam=parseInt(b.dataset.f,10);
+    [].forEach.call(this.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});
+    calcSalary();
+  });
+  attachMoney(salAmtEl,calcSalary); attachMoney(salNonTaxEl,calcSalary);
+
   // init
   calcJuhyu();
   calcSev();
+  calcSalary();
 
   // minwage.json 반영 — 같은 출처(GitHub Pages 등)에서만 동작.
   // 아트팩트/타 출처는 CSP로 차단되면 catch로 폴백(하드코딩 표) 유지 → 항상 안전.
@@ -949,6 +1170,21 @@
         if(y&&v&&MIN_WAGE_BY_YEAR[y]!==v){MIN_WAGE_BY_YEAR[y]=v;changed=true;}
       });
       if(changed) applyWage(true);
+    })
+    .catch(function(){/* 폴백 유지 */});
+
+  // rates.json 반영 — 4대보험 요율도 최저시급과 동일 구조(폴백 안전).
+  fetch("rates.json",{cache:"no-store"})
+    .then(function(r){return r.ok?r.json():null})
+    .then(function(j){
+      if(!j||typeof j!=="object")return;
+      var changed=false;
+      Object.keys(j).forEach(function(k){
+        var y=parseInt(k,10); if(!y) return;                 // "_comment" 등 무시
+        var o=j[k]; if(!o||typeof o!=="object") return;
+        RATE_BY_YEAR[y]=o; changed=true;
+      });
+      if(changed){ resolveRates(); calcSalary(); }
     })
     .catch(function(){/* 폴백 유지 */});
 })();
