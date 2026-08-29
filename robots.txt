@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# 배포 후 아래 주소를 실제 GitHub Pages 주소로 바꾸세요
+Sitemap: https://ilopark.github.io/juhyu-site/sitemap.xml
