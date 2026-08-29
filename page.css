@@ -71,4 +71,28 @@ footer.foot nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:14px}
 footer.foot nav a{color:var(--ink-soft);text-decoration:none;font-weight:500}
 footer.foot nav a:hover{color:var(--brand)}
 footer.foot b{color:var(--ink-soft)}
+
+/* 가이드 글 전용 */
+.doc .lead{font-size:17px;color:var(--ink);margin:0 0 24px;line-height:1.75}
+.doc h3{font-size:16px;font-weight:700;margin:24px 0 8px}
+.doc .cta{display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(150deg,#0E6E5C,#0A5344);color:#fff;font-weight:700;font-size:15px;
+  padding:14px 22px;border-radius:13px;text-decoration:none;box-shadow:var(--shadow);margin:10px 0}
+.doc .cta:hover{filter:brightness(1.08)}
+.doc .tip{background:var(--surface-2);border:1px solid var(--line);border-left:3px solid var(--brand);
+  border-radius:10px;padding:14px 16px;margin:18px 0;font-size:14.5px}
+.doc .tip b{color:var(--ink)}
+.doc table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;display:block;overflow-x:auto}
+.doc th,.doc td{border:1px solid var(--line);padding:10px 12px;text-align:left;white-space:nowrap}
+.doc th{background:var(--surface-2);font-weight:600;color:var(--ink)}
+.doc td{color:var(--ink-soft)}
+.doc .toc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:24px 0}
+.doc .toc strong{display:block;font-size:13px;color:var(--muted);margin-bottom:8px;font-weight:600}
+.doc .toc a{display:block;padding:4px 0;color:var(--ink-soft);text-decoration:none;font-size:14.5px}
+.doc .toc a:hover{color:var(--brand)}
+.doc .more{display:grid;gap:10px;margin-top:16px}
+.doc .more a{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:14px 16px;
+  text-decoration:none;color:var(--ink);font-weight:600;font-size:14.5px;transition:.15s}
+.doc .more a:hover{border-color:var(--brand);color:var(--brand)}
+.doc .more a span{display:block;color:var(--muted);font-weight:400;font-size:12.5px;margin-top:2px}
 @media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}

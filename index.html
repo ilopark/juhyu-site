@@ -398,6 +398,14 @@
   footer.foot .foot-nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:16px}
   footer.foot .foot-nav a{color:var(--ink-soft);text-decoration:none;font-weight:500}
   footer.foot .foot-nav a:hover{color:var(--brand)}
+  .guides-sec{padding:16px 0}
+  .guide-list{display:grid;gap:12px;margin-top:20px}
+  @media(min-width:640px){.guide-list{grid-template-columns:repeat(3,1fr)}}
+  .g-card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:16px;
+    padding:20px;box-shadow:var(--shadow);text-decoration:none;transition:.16s}
+  .g-card:hover{border-color:var(--brand);transform:translateY(-2px)}
+  .g-card b{display:block;color:var(--ink);font-size:15.5px;font-weight:700;margin-bottom:6px;line-height:1.4}
+  .g-card span{color:var(--ink-soft);font-size:13px;line-height:1.5}
   footer.foot .disc{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:16px;color:var(--ink-soft)}
   footer.foot b{color:var(--ink-soft)}
 
@@ -805,6 +813,15 @@
   </section>
   </div>
 
+  <section class="guides-sec">
+    <div class="sec-head"><div class="kicker">Guides</div><h2>알아두면 돈 되는 가이드</h2></div>
+    <div class="guide-list">
+      <a class="g-card" href="guide-juhyusudang.html"><b>주휴수당, 알바도 무조건 받는 돈</b><span>주 15시간 넘고 개근이면 매주 하루치가 더 붙습니다. 조건과 계산법 정리.</span></a>
+      <a class="g-card" href="guide-toejikgeum.html"><b>알바도 퇴직금 받습니다</b><span>1년만 채우면 대상. 평균임금으로 계산하는 법과 예시.</span></a>
+      <a class="g-card" href="guide-silsuryeong.html"><b>연봉과 실수령액은 왜 다를까</b><span>2026년 4대보험·세금 공제를 뜯어봤습니다.</span></a>
+    </div>
+  </section>
+
   <footer class="foot">
     <nav class="foot-nav"><a href="about.html">소개</a><a href="privacy.html">개인정보처리방침</a><a href="contact.html">문의</a></nav>
     <div class="disc"><b>ⓘ 참고용 안내</b> — 본 계산기는 근로기준법·근로자퇴직급여 보장법의 산정 방식을 단순화해 세전 기준으로 계산합니다. 실제 지급액은 근로계약 내용, 통상임금 비교, 4주 평균 근로시간, 공제 항목 등에 따라 달라질 수 있으며 법적 효력을 갖지 않습니다.</div>
@@ -867,6 +884,11 @@
   $("#tab-juhyu").addEventListener("click",function(){selectTab("juhyu")});
   $("#tab-sev").addEventListener("click",function(){selectTab("sev")});
   $("#tab-salary").addEventListener("click",function(){selectTab("salary")});
+  // 가이드 글의 CTA(#tool-sev / #tool-salary)로 들어오면 해당 탭을 연다
+  (function(){var h=(location.hash||"").slice(1);
+    if(h==="tool-sev")selectTab("sev");
+    else if(h==="tool-salary")selectTab("salary");
+    else if(h==="tool-juhyu")selectTab("juhyu");})();
 
   // ===== animated number (fallback-safe for hidden tabs) =====
   function animateNum(el,to){
