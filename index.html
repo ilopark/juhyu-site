@@ -377,6 +377,9 @@
   :root[data-theme="dark"] .formula .eq b,:root:not([data-theme="light"]) .formula .eq b{background:rgba(0,0,0,.16)}
   @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .formula .eq b{background:rgba(255,255,255,.18)}}
   .formula p.exp{margin:14px 0 0;font-size:13.5px;opacity:.92;max-width:54ch;line-height:1.6}
+  /* 한글이 낱글자로 쪼개지지 않게 — 띄어쓰기 단위로만 줄바꿈 */
+  .formula .eq,.formula .exp,.hero p.lead,.sec-head h2,.panel-sub,.cond p,.cond h3,
+  details.q summary,details.q .a,.slip-note,.ded-hint,.toggle-row .t-text,.flabel .name{word-break:keep-all}
 
   .faq{display:grid;gap:12px}
   details.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
