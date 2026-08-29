@@ -1,0 +1,74 @@
+/* 서브페이지(개인정보처리방침·소개·문의) 공용 스타일 — 메인과 동일 디자인 토큰 */
+:root{
+  color-scheme:light;
+  --bg:#EEF2F0;--surface:#FFFFFF;--surface-2:#F7FAF8;--ink:#14211D;--ink-soft:#42544D;
+  --muted:#7B8B83;--line:#DBE4DF;--line-strong:#C6D2CC;--brand:#0E6E5C;--brand-strong:#0A5344;
+  --accent:#FF6A4D;--shadow:0 1px 2px rgba(20,33,29,.04),0 12px 34px -14px rgba(20,33,29,.22);--radius:18px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#0D1310;--surface:#151F1B;--surface-2:#1B2621;--ink:#E9F1EC;--ink-soft:#AAB9B2;
+  --muted:#7E8E87;--line:#28342E;--line-strong:#33413A;--brand:#31C7A2;--brand-strong:#3ED6B0;
+  --accent:#FF7E63;--shadow:0 1px 2px rgba(0,0,0,.3),0 14px 40px -16px rgba(0,0,0,.6);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0D1310;--surface:#151F1B;--surface-2:#1B2621;--ink:#E9F1EC;--ink-soft:#AAB9B2;
+  --muted:#7E8E87;--line:#28342E;--line-strong:#33413A;--brand:#31C7A2;--brand-strong:#3ED6B0;
+  --accent:#FF7E63;--shadow:0 1px 2px rgba(0,0,0,.3),0 14px 40px -16px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.7;
+  font-family:"IBM Plex Sans KR",system-ui,-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;word-break:keep-all}
+a{color:var(--brand);text-underline-offset:3px}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+
+/* header */
+header.top{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(10px);
+  background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+.top-inner{display:flex;align-items:center;gap:14px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.brand .mark{width:30px;height:30px;border-radius:9px;flex:none;
+  background:linear-gradient(150deg,var(--brand),var(--brand-strong));display:grid;place-items:center;
+  color:#fff;font-family:"Black Han Sans";font-size:17px}
+.brand small{font-weight:500;color:var(--muted);font-size:12.5px}
+.spacer{flex:1}
+.theme-btn{width:40px;height:40px;border-radius:11px;border:1px solid var(--line);background:var(--surface);
+  color:var(--ink-soft);cursor:pointer;display:grid;place-items:center;transition:.2s}
+.theme-btn:hover{color:var(--ink);border-color:var(--line-strong)}
+.theme-btn svg{width:19px;height:19px}
+.theme-btn .moon{display:none}
+:root[data-theme="dark"] .theme-btn .sun{display:none}
+:root[data-theme="dark"] .theme-btn .moon{display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme-btn .sun{display:none}
+  :root:not([data-theme="light"]) .theme-btn .moon{display:block}}
+
+/* document */
+.doc{padding:44px 0 20px}
+.doc .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;
+  letter-spacing:.02em;color:var(--brand);background:color-mix(in srgb,var(--brand) 12%,var(--surface));
+  border:1px solid color-mix(in srgb,var(--brand) 22%,var(--line));padding:6px 13px;border-radius:999px;margin-bottom:18px}
+.doc h1{font-family:"Black Han Sans";font-weight:400;font-size:clamp(28px,5vw,42px);
+  letter-spacing:-.01em;margin:0 0 8px;line-height:1.1}
+.doc .updated{color:var(--muted);font-size:13px;margin:0 0 28px}
+.doc h2{font-size:19px;font-weight:700;margin:34px 0 10px;padding-top:6px}
+.doc p{margin:0 0 14px;color:var(--ink-soft)}
+.doc ul{margin:0 0 16px;padding-left:20px;color:var(--ink-soft)}
+.doc li{margin:6px 0}
+.doc b,.doc strong{color:var(--ink);font-weight:600}
+.doc .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:22px 24px;margin:20px 0}
+.doc .mail{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:17px;
+  color:var(--brand);text-decoration:none;background:var(--surface-2);border:1px solid var(--line);
+  padding:12px 18px;border-radius:12px;margin:6px 0 4px}
+.doc .mail:hover{border-color:var(--brand)}
+
+/* footer */
+footer.foot{margin-top:52px;border-top:1px solid var(--line);padding:26px 0 44px;
+  color:var(--muted);font-size:12.5px;line-height:1.8}
+footer.foot nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:14px}
+footer.foot nav a{color:var(--ink-soft);text-decoration:none;font-weight:500}
+footer.foot nav a:hover{color:var(--brand)}
+footer.foot b{color:var(--ink-soft)}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}

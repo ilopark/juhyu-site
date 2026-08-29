@@ -395,6 +395,9 @@
   details.q .a b{color:var(--ink);font-weight:600}
 
   footer.foot{margin-top:60px;border-top:1px solid var(--line);padding:30px 0 44px;color:var(--muted);font-size:12.5px;line-height:1.7}
+  footer.foot .foot-nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:16px}
+  footer.foot .foot-nav a{color:var(--ink-soft);text-decoration:none;font-weight:500}
+  footer.foot .foot-nav a:hover{color:var(--brand)}
   footer.foot .disc{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:16px;color:var(--ink-soft)}
   footer.foot b{color:var(--ink-soft)}
 
@@ -803,6 +806,7 @@
   </div>
 
   <footer class="foot">
+    <nav class="foot-nav"><a href="about.html">소개</a><a href="privacy.html">개인정보처리방침</a><a href="contact.html">문의</a></nav>
     <div class="disc"><b>ⓘ 참고용 안내</b> — 본 계산기는 근로기준법·근로자퇴직급여 보장법의 산정 방식을 단순화해 세전 기준으로 계산합니다. 실제 지급액은 근로계약 내용, 통상임금 비교, 4주 평균 근로시간, 공제 항목 등에 따라 달라질 수 있으며 법적 효력을 갖지 않습니다.</div>
     <span data-year></span>년 최저임금 시간급 <b><span data-minwage></span>원</b> 기준 · 근로기준법 제55조 · 근로자퇴직급여 보장법 제8조<br>
     © 알바 계산기 — 주휴수당·퇴직금·연봉 실수령액 무료 계산기
